@@ -148,29 +148,35 @@ hello world
 ^d
 ````
 cat > newfile 
+
 ```
 Hello world
-hello world```
+hello world
+```
 
 grep Hello newfile 
+
 ## OUTPUT
-
+```
 Hello world
-
+```
 
 grep hello newfile
+
 ## OUTPUT
-
-
+```
 hello world
-
+```
 
 grep -v hello newfile 
-## OUTPUT
 
+## OUTPUT
+```
 Hello world
+```
 
 cat newfile | grep -i "hello"
+
 ## OUTPUT
 
 ```
