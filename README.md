@@ -186,7 +186,7 @@ hello world
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
-``
+```
 2
 ```
 grep -w -n world newfile   
