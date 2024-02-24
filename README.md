@@ -629,12 +629,14 @@ readme.txt
 # Shell Script
 
 echo '#!/bin/sh' > my-script.sh
-echo 'echo Hello World‘; exit 0 >> my-script.sh
+echo 'echo Hello World; exit 0' >> my-script.sh
 
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
-
+```
+Hello World
+```
  
 cat << stop > herecheck.txt
 ```
@@ -711,22 +713,17 @@ ls file1
 ## OUTPUT
 
 echo $?
-## OUTPUT 
-2
+## OUTPUT
+
 ./one
 bash: ./one: Permission denied
-
 echo $?
 ## OUTPUT 
- ```
-abcd
- ```
 
+abcd
 echo $?
  ## OUTPUT
 
-
- 
 # mis-using string comparisons
 
 cat < strcomp.sh 
@@ -1184,9 +1181,9 @@ cat forinfile.sh
 #!/bin/bash
 # reading values from a file
 file="cities"
-for state in `cat $file`
+for state in $(cat $file)
 do
-echo "Visit beautiful $file“
+echo "Visit beautiful $state"
 done
 ```
 $ chmod 777 forinfile.sh
@@ -1200,7 +1197,15 @@ Bhadrachalam
 Khammam
 
 ## OUTPUT
-
+```
+Visit beautiful Hyderabad
+Visit beautiful Alampur
+Visit beautiful Basara
+Visit beautiful Warangal
+Visit beautiful Adilabad
+Visit beautiful Bhadrachalam
+Visit beautiful Khammam
+```
 
 cat forctype.sh 
 ```bash
