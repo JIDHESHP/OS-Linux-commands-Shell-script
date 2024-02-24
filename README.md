@@ -262,7 +262,7 @@ Linux is best in this World
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-``
+```
 Hello world
 hello world
 Linux is best in this World
