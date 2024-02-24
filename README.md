@@ -65,9 +65,9 @@ s.n. dasgupta
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
-
+```
 file1 file2 differ: byte 1, line 1
- 
+ ```
 comm file1 file2
  ## OUTPUT
 
@@ -242,8 +242,9 @@ hello world
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
+```
 hello world
+```
 
 egrep '(world$)' newfile 
 ## OUTPUT
@@ -255,28 +256,32 @@ hello world
 
 egrep '(World$)' newfile 
 ## OUTPUT
-
+```
 Linux is best in this World
+```
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 
+
+
 egrep '[1-9]' newfile 
-
-
 ## OUTPUT
-
+```
 Linux is world number 1
+```
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
+```
 Linux is world number 1
+```
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
-
+```
 Linux is best in this World
+```
 
 egrep l{2} newfile
 ## OUTPUT
@@ -311,13 +316,15 @@ cat > file23
 
 sed -n -e '3p' file23
 ## OUTPUT
-
+```
 1002 | tom |  5000 | Admin
+```
 
 sed -n -e '$p' file23
 ## OUTPUT
-
+```
 1001 | Ram | 10000 | HR
+```
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
@@ -603,8 +610,9 @@ gzip backup.tar
 
 ls .gz
 ## OUTPUT
-
+```
 backup.tar.gz  bench.py       hello.c        hello.js       readme.txt
+```
 
 gunzip backup.tar.gz
 ## OUTPUT
@@ -617,10 +625,10 @@ readme.txt
  ```
 
 # Shell Script
-```
+
 echo '#!/bin/sh' > my-script.sh
 echo 'echo Hello World‘; exit 0 >> my-script.sh
-```
+
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
@@ -702,17 +710,18 @@ ls file1
 
 echo $?
 ## OUTPUT 
-
+``
 2
-
 ./one
 bash: ./one: Permission denied
- 
+```
+
 echo $?
 ## OUTPUT 
- 
+ ```
 abcd
- 
+ ```
+
 echo $?
  ## OUTPUT
 
@@ -751,8 +760,9 @@ chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
-
+```
 baseball is less than hockey
+```
 
 # check file ownership
 cat < psswdperm.sh 
@@ -779,9 +789,9 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
-
+```
 Sorry, you are not the owner of the /etc/passwd file
-
+```
 # check if with file location
 cat>ifnested.sh 
 ```bash
@@ -963,9 +973,9 @@ $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
 ## OUTPUT
-
+```
 Sorry, you are not allowed here
-
+```
 # testing compound comparisons
 cat> ifcompound.sh 
 ```bash
@@ -980,9 +990,9 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
-
+```
 The file exists and you can write to it
-
+```
 # using the case command
 cat >casecheck.sh 
 ```bash
@@ -1003,9 +1013,9 @@ $ chmod 755 casecheck.sh
 $ ./casecheck.sh 
 
 ## OUTPUT
-
+```
 Sorry, you are not allowed here
- 
+ ```
 cat > whiletest.sh
 ```bash
 #!/bin/bash
@@ -1204,12 +1214,13 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype.sh 
 ## OUTPUT
-
+```
 The value of i is 1
 The value of i is 2
 The value of i is 3
 The value of i is 4
 The value of i is 5
+```
 
 cat forctype1.sh 
 ```bash
@@ -1370,9 +1381,9 @@ fi
  ./funcex.sh 1 2
 
 ## OUTPUT
-
+```
 The result is 2
-
+```
  
 cat argshift.sh
 ```bash
