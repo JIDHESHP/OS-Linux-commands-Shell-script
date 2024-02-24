@@ -186,9 +186,9 @@ hello world
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
-
+``
 2
-
+```
 grep -w -n world newfile   
 ## OUTPUT
 
@@ -262,9 +262,11 @@ Linux is best in this World
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-
-
-
+``
+Hello world
+hello world
+Linux is best in this World
+```
 egrep '[1-9]' newfile 
 ## OUTPUT
 ```
@@ -710,11 +712,9 @@ ls file1
 
 echo $?
 ## OUTPUT 
-``
 2
 ./one
 bash: ./one: Permission denied
-```
 
 echo $?
 ## OUTPUT 
